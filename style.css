@@ -83,6 +83,9 @@
 @media (max-width:500px)
 {
     .container{
+        display:flex;
+       align-items: center;
+       justify-content: center;
         width: 370px;
         font-size: 50px;
     }
