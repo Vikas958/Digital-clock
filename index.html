@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="clock">
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="mins">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        let a;
+        let hrs;
+        let mins;
+        let sec;
+        setInterval(() => {
+            a = new Date;
+            hrs=(a.getHours()<10?"0":"")+a.getHours();
+            mins=(a.getMinutes()<10?"0":"")+a.getMinutes();
+            sec=(a.getSeconds()<10?"0":"")+a.getSeconds();
+            
+            document.getElementById("hrs").innerHTML = hrs;
+            document.getElementById("mins").innerHTML = mins;
+            document.getElementById("sec").innerHTML = sec;
+        },1000)
+    </script>
+
+</body>
+</html>
